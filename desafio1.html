@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="desafio.css">
+  <title>Detalle del producto</title>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="product_detail.html">Detalle del producto</a></li>
+        <li><a href="cart.html">Carrito de compras</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Content -->
+  <div class="container">
+    <div class="product-images">
+      <img src="imagen1.jpg" alt="Producto 1" onclick="displayProductDetails(1)">
+      <img src="imagen2.jpg" alt="Producto 2" onclick="displayProductDetails(2)">
+      <img src="imagen1.jpg" alt="Producto 3" onclick="displayProductDetails(3)">
+    </div>
+    <div class="product-details">
+      <h1 id="product-name">Nombre del Producto</h1>
+      <p id="product-price">Precio: $99.99</p>
+      <p id="product-stock">Stock: 5</p>
+      <p id="product-description">Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam dui at turpis fringilla, id viverra risus eleifend.</p>
+      <button>Agregar al carrito</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Todos los derechos reservados &copy; 2023</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="desafio.js"></script>
+</body>
+</html>

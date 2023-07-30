@@ -1,0 +1,83 @@
+/* Estilos para el contenedor principal */
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+/* Estilos para la galería de imágenes */
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Estilos para los contenedores de las imágenes */
+.image-container {
+  width: 120px;
+  height: 600px; /* Aumentamos la altura de las imágenes */
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.3s ease; /* Añadimos una transición de transformación */
+}
+
+/* Estilos para las imágenes */
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hacemos que la imagen ocupe todo el espacio disponible del contenedor */
+  cursor: pointer;
+}
+
+/* Efecto de agrandar al pasar el cursor sobre las imágenes */
+.image-container:hover {
+  width: 300px;/* transform: scale(1.5, 1); */ /* Aumentamos la escala del contenedor */
+  z-index: 1; /* Aseguramos que el contenedor se muestre por encima de otros elementos */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Agregamos una sombra para dar más profundidad */
+}
+
+/* Estilos para la superposición de las imágenes */
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Estilos para los títulos de las imágenes */
+.image-title {
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Animación para mostrar el título al pasar el cursor sobre la imagen */
+.image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+
+/* /* Estilos para los contenedores de las imágenes hermanas */
+/* .image-container:hover ~ .image-container {
+  transform: translateX(20px);  *//* Movemos las imágenes hermanas hacia la derecha */
+/* transform: translateX(-20px); */
+/* }  */
+
+/* Ajustes adicionales para las imágenes hermanas */
+/* .image-container:hover ~ .image-container img {
+  filter: grayscale(100%); */ /* Aplicamos un efecto de escala de grises a las imágenes hermanas*/
+  /* transition: transform 0.3s ease, filter 0.3s ease; */ /* Añadimos una transición a las imágenes hermanas*/
+/* } */

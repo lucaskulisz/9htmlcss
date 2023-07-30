@@ -1,0 +1,68 @@
+.card {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; /* Establecemos la perspectiva para la animación 3D */
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  backface-visibility: hidden; /* Ocultamos el dorso de la tarjeta al inicio */
+  transition: transform 0.6s ease; /* Añadimos una transición para la animación 3D */
+}
+
+.back {
+  transform: rotateY(180deg); /* Invertimos la cara del dorso */
+}
+
+.card:hover .front {
+  transform: rotateY(180deg); /* Giramos la tarjeta al pasar el cursor sobre ella */
+}
+
+.card:hover .back {
+  transform: rotateY(0deg); /* Giramos la tarjeta al pasar el cursor sobre ella */
+}
+
+/* Estilos adicionales para personalizar la apariencia */
+.front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(imagen1.jpg);
+}
+
+.back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: rotateY(180deg);
+  background-color: #4e4e4e;
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  color: #aaff00;
+}
+
